@@ -10,13 +10,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add header files
 set(HEADERS
-    include/Numeric\ Character.hpp
+    src/Character.hpp
+    src/NumericCharacter.hpp
+    src/OperatorCharacter.hpp
+    src/EqualityCharacter.hpp
+    src/Equation.hpp
+    src/ExpNodes.hpp
 )
 
 # Add source files
 set(SOURCES
     src/main.cpp
-    src/Numeric\ Character.cpp
+    src/Character.cpp
+    src/NumericCharacter.cpp
+    src/OperatorCharacter.cpp
+    src/Equation.cpp
+    src/ExpNodes.cpp
 )
 
 # Add executable

@@ -1,7 +1,4 @@
-//
-//
-
-#include "Numeric Character.hpp"
+#include "NumericCharacter.hpp"
 
 NumericCharacter::NumericCharacter(string s, int value, bool representation[7]) {
   stringValue = s;

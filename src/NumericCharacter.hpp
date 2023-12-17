@@ -1,13 +1,12 @@
-//
-//
-
-#ifndef Numeric_Character_hpp
-#define Numeric_Character_hpp
+#ifndef NUMERIC_CHARACTER_HPP
+#define NUMERIC_CHARACTER_HPP
 
 #include <stdio.h>
 #include <string>
 #include <list>
 #include <iostream>
+
+#include "Character.hpp"
 
 using namespace std;
 
@@ -34,7 +33,7 @@ struct NumericCharacterModification
   char character;
 };
 
-class NumericCharacter
+class NumericCharacter : public Character
 {
   public:
   NumericCharacter(string s, int value, bool representation[7]);
@@ -57,6 +56,9 @@ class NumericCharacter
   // Given a numericCharacter give the number of additions and removals required to transform this into the given character
   NumericCharacterTransform movesRequired(NumericCharacter& character);
 
+  const CharacterType getType() override { return CharacterType::NUMERIC; }
+  const char toChar() override { return this->stringValue[0]; }
+
   // convienence init for the below 10
   static NumericCharacter initFromCharacter(char c);
 
@@ -73,4 +75,4 @@ class NumericCharacter
   static NumericCharacter nine();
 };
 
-#endif /* Numeric_Character_hpp */
+#endif /* NUMERIC_CHARACTER_HPP */
