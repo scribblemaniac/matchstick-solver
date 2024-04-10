@@ -1,6 +1,5 @@
 #include "Equation.hpp"
 
-#include "Character.hpp"
 #include "ExpNodes.hpp"
 #include "NumericCharacter.hpp"
 #include "OperatorCharacter.hpp"
@@ -43,7 +42,7 @@ bool Equation::parseEquation() {
     for (const auto& c : characters) {
         if ((nc = dynamic_cast<NumericCharacter*>(c.get())) != nullptr) {
             isReadingNum = true;
-            currentNum = currentNum * 10 + nc->numericValue;
+            currentNum = currentNum * 10 + nc->getValue();
             continue;
         }
         else if (isReadingNum) {
