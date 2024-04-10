@@ -16,6 +16,8 @@ set(HEADERS
     src/EqualityCharacter.hpp
     src/Equation.hpp
     src/ExpNodes.hpp
+    src/Operator.hpp
+    src/ConsoleOutput.hpp
 )
 
 # Add source files
@@ -26,6 +28,7 @@ set(SOURCES
     src/OperatorCharacter.cpp
     src/Equation.cpp
     src/ExpNodes.cpp
+    src/ConsoleOutput.cpp
 )
 
 # Add executable
